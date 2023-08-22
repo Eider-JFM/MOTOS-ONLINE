@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tienda-dgt/static/css/main.27ac5a2c.css",
+    "main.js": "/tienda-dgt/static/js/main.7424a9eb.js",
+    "index.html": "/tienda-dgt/index.html",
+    "main.27ac5a2c.css.map": "/tienda-dgt/static/css/main.27ac5a2c.css.map",
+    "main.7424a9eb.js.map": "/tienda-dgt/static/js/main.7424a9eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27ac5a2c.css",
+    "static/js/main.7424a9eb.js"
+  ]
+}
