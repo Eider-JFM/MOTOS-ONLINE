@@ -1,0 +1,17 @@
+.main {
+    background-color: #f5edc4!important;
+    color: #7359b2;
+}
+
+.form{
+    border-color:#c1acf1!important ;
+}
+.buttonStyle{
+    color: white!important;
+    background-color: #826db3!important;
+    border-color: #826db3!important;
+}
+.buttonClearStyle{
+    color: #826db3!important;
+    border-color: #826db3!important;
+}
