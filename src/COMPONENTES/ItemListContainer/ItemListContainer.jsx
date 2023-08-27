@@ -34,7 +34,9 @@ const ItemListContainer = ({ props, productSearched }) => {
       }
     };
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, getProductsByCategory, products]);
+ 
 
   useEffect(() => {
     setCurrentPage(1);
