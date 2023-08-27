@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
 import { CartContext } from "../../Context/CartContext";
-import { db } from '../../Firebase/config';
+import { db } from '../../firebase/config';
 import Load from '../Load/Load';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 const Checkout = () => {

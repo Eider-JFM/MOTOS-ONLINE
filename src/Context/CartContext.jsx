@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../Firebase/config';
+import { db } from '../firebase/config';
 
 export const CartContext = createContext();
 
