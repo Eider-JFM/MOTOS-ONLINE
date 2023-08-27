@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Container } from "react-bootstrap";
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../CONTEXT/CartContext";
+import { CartContext } from "../../Context/CartContext";
 import './itemDetailContainer.css';
 
 
@@ -18,17 +18,17 @@ const ItemDetailContainer = () => {
                     const filteredProduct = await getProductById(itemId);
                     setProduct(filteredProduct);
                 } else {
-                    console.log("El producto no existe");
+                    console.log("El producto no encontrado");
                 }
             } catch (error) {
-                console.error("Error fetching data", error);
+                console.error("Error encontrando datos", error);
             }
         };
         fetchData();
     }, [itemId, getProductById]);
 
     return (
-        <Container fluid className="main vh-100">
+        <Container fluid className="main vw-100">
             <div className="d-flex justify-content-center align-items-center pt-3">
               <ItemDetail {...product} />
             </div>

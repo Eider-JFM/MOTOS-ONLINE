@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { StoreProvider } from './CONTEXT/CartContext';
+import { StoreProvider } from './Context/CartContext';
 import ItemDetailContainer from './COMPONENTES/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './COMPONENTES/ItemListContainer/ItemListContainer';
 import NavBar from './COMPONENTES/NavBar/NavBar';
@@ -16,12 +16,11 @@ function App() {
   return (
     <>
       <BrowserRouter basename='/'>
-        <NavBar setProductSearched= {setProductSearched}/>
         <StoreProvider>
           <NavBar setProductSearched= {setProductSearched}/>
             <Routes>
-              <Route path='/' element={<ItemListContainer props = {'Bienvenido a Kawaii Store'} productSearched={productSearched}/>}/>
-              <Route path='/category/:categoryId' element={<ItemListContainer />}/>
+              <Route path='/' element={<ItemListContainer props = {'Bienvenido a TIENDA DGT'} productSearched={productSearched}/>}/>
+              <Route path='/category/:category' element={<ItemListContainer />}/>
               <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
               <Route path='/cart' element={<Cart />}/>
               <Route path='/checkout' element={<Checkout />}/>

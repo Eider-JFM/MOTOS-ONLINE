@@ -33,7 +33,7 @@ const CheckoutForm = ({onConfirm}) => {
         const newErrors = {};
         if (name === '') newErrors.name = 'Nombre es requerido';
         if (phone === '') newErrors.phone = 'Teléfono es requerido';
-        if (!/^\d{10}$/.test(phone)) newErrors.phone = 'Teléfono inválido deben ser 10 digitos';
+        if (!/^\d{10}$/.test(phone)) newErrors.phone = 'Teléfono inválido deben ser de 10 digitos';
         if (email === '') newErrors.email = 'Email es requerido';
         if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) newErrors.email = 'Email inválido';
         setErrors(newErrors);

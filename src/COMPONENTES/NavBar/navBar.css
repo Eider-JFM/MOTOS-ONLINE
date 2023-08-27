@@ -7,15 +7,23 @@
   }
 
   .links-color {
-    color: #F1FAEE!important;
+    color: #457B9D!important;
   }
 
   .links-color #navbar-dropdown {
     color: #f1faeec6!important;
   }
 
+  .Item-color {
+    color: #F1FAEE!important;
+  }
+
   .button-color {
     color:#457B9D!important;
     background-color: #1D3557!important;
     border-color: #1D3557!important;
+  }
+
+  .Form {
+    padding-right: 3.5vw;
   }

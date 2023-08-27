@@ -2,15 +2,15 @@ import { addDoc, collection, documentId, getDocs, query, Timestamp, where, write
 import { useState } from "react";
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
-import { CartContext } from '../../CONTEXT/CartContext';
-import { db } from '../../firebase/config';
+import { CartContext } from "../../Context/CartContext";
+import { db } from '../../Firebase/config';
 import Load from '../Load/Load';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 const Checkout = () => {
     const {cart, cleanCart} = useContext(CartContext);
     const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState("");
-    const totalProductsValue = cart.reduce((total, product) => total + product.quantity * product.value, 0);
+    const totalProductsValue = cart.reduce((total, product) => total + product.quantity * product.price, 0);
 
     const createOrder = async({ name, phone, email}) => {
         try {
@@ -26,7 +26,7 @@ const Checkout = () => {
             const batch = writeBatch(db);
             const outOfStock = [];
             const ids = cart.map(product => product.id);
-            const productsRef = collection(db, 'products');
+            const productsRef = collection(db, 'PRODUCTOS');
             const productsFromFirebase = await getDocs(query(productsRef, where(documentId(), 'in', ids)));
             const  { docs } = productsFromFirebase;
             docs.forEach(doc => {
@@ -45,7 +45,7 @@ const Checkout = () => {
                 setOrderId(orderAdded.id);
                 cleanCart();
             }else{
-                console.error('hay productos fuera de stock');
+                console.error('Producto sin suficiente stock');
             }
         } catch (error) {
             console.error(error)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pagination } from 'react-bootstrap';
 
-const NumPag = ({ currentPage, totalPages, onPageChange }) => {
+const Paginador = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
     onPageChange(page);
   };
@@ -21,4 +21,4 @@ const NumPag = ({ currentPage, totalPages, onPageChange }) => {
   );
 };
 
-export default NumPag;
+export default Paginador;

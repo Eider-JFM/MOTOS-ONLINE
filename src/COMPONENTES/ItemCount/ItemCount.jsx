@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import './ItemCount.css';
+import { GrAddCircle } from "react-icons/gr";
+import { IoMdRemoveCircleOutline } from "react-icons/io";
+import { BiCartAdd } from "react-icons/bi";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [numberOfProducts, setNumberOfProducts] = useState(initial);
@@ -29,7 +32,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div className="d-flex">
           <Button variant="light" onClick={handleDecrease}>
-            -
+            <IoMdRemoveCircleOutline/>
           </Button>
           <Form.Control
             type="number"
@@ -39,11 +42,11 @@ const ItemCount = ({ initial, stock, onAdd }) => {
             onChange={handleChange}
           />
           <Button variant="light" onClick={handleAdd}>
-            +
+            <GrAddCircle/>
           </Button>
         </div>
         <Button variant="success" className="mt-2 mb-2 buttonStyle" onClick={() => onAdd(numberOfProducts)} disabled={!stock}>
-          Agregar al carrito
+          Agregar <BiCartAdd size={20}/>
         </Button>
       </div>
     </Container>

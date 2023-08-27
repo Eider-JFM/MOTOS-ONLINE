@@ -14,7 +14,7 @@ const NavBar = ({setProductSearched}) => {
 
   const handleShowAll = () => {
     setProductSearched(''); 
-    setSearchTerm('');
+    setSearchTerm(''); 
   };
 
   return (
@@ -24,19 +24,17 @@ const NavBar = ({setProductSearched}) => {
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <br />
+            <Nav.Link className="Item-color" href="#">Ofertas</Nav.Link>
             <NavDropdown className="links-color" title="Categorías" id="navbar-dropdown">
-              <NavDropdown.Item className="links-color" as={Link} to= "/category/papeleria">TV</NavDropdown.Item>
-              <NavDropdown.Item className="links-color" as={Link} to= "/category/accesorios">CELULARES</NavDropdown.Item>
-              <NavDropdown.Item className="links-color" as={Link} to= "/category/ropa">PORTATIL</NavDropdown.Item>
+              <NavDropdown.Item className="links-color" as={Link} to= "/category/TV">Tv</NavDropdown.Item>
+              <NavDropdown.Item className="links-color" as={Link} to= "/category/CELULARES">Celulares</NavDropdown.Item>
+              <NavDropdown.Item className="links-color" as={Link} to= "/category/PORTATIL">Portatil</NavDropdown.Item>
               <NavDropdown.Item className="links-color" as={Link} to= "/" onClick={handleShowAll}>Todos los productos</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item className="links-color" href="#">Formulario de contacto</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex gap-2" role="search">
-            <FormControl className="me-2" type="search" name="search" placeholder="Buscar producto" aria-label="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-            <Button variant="outline-success" type="button" onClick={handleSearch} className="button-color">Buscar</Button>
+          <Form className="d-flex gap-2 Form" role="search">
             <CartWidget />
           </Form>
         </Navbar.Collapse>

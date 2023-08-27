@@ -1,5 +1,15 @@
 .linkStyle{
     color: white!important;
-    background-color: #826db3!important;
-    border-color: #826db3!important;
+    background-color: #457B9D!important;
+    border-color: #457B9D!important;
 }
+
+
+.abs-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+

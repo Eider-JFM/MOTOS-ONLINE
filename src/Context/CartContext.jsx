@@ -1,14 +1,13 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebase/config';
+import { db } from '../Firebase/config';
 
 export const CartContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-  const [PRODUCTOS, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -19,7 +18,7 @@ export const StoreProvider = ({ children }) => {
                             })
         setProducts(productsMap);
       } catch (error) {
-        console.error('Error al cargar los productos:', error);
+        console.error('Error al cargar los datos de productos:', error);
       }
     };
 
@@ -27,18 +26,18 @@ export const StoreProvider = ({ children }) => {
   }, []);
 
   const getProductById = (productId) => {
-    return PRODUCTOS.find((product) => product.id === productId);
+    return products.find((product) => product.id === productId);
   };
 
   const getProductsByCategory = (category) => {
-    return PRODUCTOS.filter((product) => product.cat === category);
+    return products.filter((product) => product.category === category);
   };
 
   const addItemToCart = (item, quantity) =>{
     if (!isInCart(item.id)){
       setCart(prev => [...prev, {...item, quantity:quantity}]);
     }else{
-      console.error('El producto ya esta agregado');
+      console.error('Producto ya agregado');
     }
   };
 
@@ -54,8 +53,8 @@ const isInCart = (itemId) => {
 };
 
   return (
-    <CartContext.Provider value={{ PRODUCTOS, getProductById, getProductsByCategory, cart, addItemToCart, removeItemFromCart, cleanCart }}>
+    <CartContext.Provider value={{ products, getProductById, getProductsByCategory, cart, addItemToCart, removeItemFromCart, cleanCart }}>
       {children}
     </CartContext.Provider>
   );
-}
+};

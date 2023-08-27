@@ -1,17 +1,17 @@
 .main {
-    background-color: #f5edc4!important;
-    color: #7359b2;
+    background-color: #1D3557!important;
+    color: white !important;
 }
 
 .form{
-    border-color:#c1acf1!important ;
+    border-color:#A8DADC!important ;
 }
 .buttonStyle{
     color: white!important;
-    background-color: #826db3!important;
-    border-color: #826db3!important;
+    background-color: #457B9D!important;
+    border-color: #457B9D!important;
 }
 .buttonClearStyle{
-    color: #826db3!important;
-    border-color: #826db3!important;
+    color: #457B9D!important;
+    border-color: #457B9D!important;
 }
