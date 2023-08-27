@@ -1,20 +1,14 @@
-import { useState } from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './navBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = ({setProductSearched}) => {
-  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearch = () =>{
-    setProductSearched(searchTerm);
-    setSearchTerm('');
-  };
-
+  
   const handleShowAll = () => {
     setProductSearched(''); 
-    setSearchTerm(''); 
+   
   };
 
   return (
