@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/TIENDA-DGT'>
         <StoreProvider>
           <NavBar setProductSearched= {setProductSearched}/>
             <Routes>
