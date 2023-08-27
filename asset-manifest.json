@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tienda-dgt/static/css/main.27ac5a2c.css",
-    "main.js": "/tienda-dgt/static/js/main.7424a9eb.js",
+    "main.css": "/tienda-dgt/static/css/main.57fbb41b.css",
+    "main.js": "/tienda-dgt/static/js/main.15484a5d.js",
     "index.html": "/tienda-dgt/index.html",
-    "main.27ac5a2c.css.map": "/tienda-dgt/static/css/main.27ac5a2c.css.map",
-    "main.7424a9eb.js.map": "/tienda-dgt/static/js/main.7424a9eb.js.map"
+    "main.57fbb41b.css.map": "/tienda-dgt/static/css/main.57fbb41b.css.map",
+    "main.15484a5d.js.map": "/tienda-dgt/static/js/main.15484a5d.js.map"
   },
   "entrypoints": [
-    "static/css/main.27ac5a2c.css",
-    "static/js/main.7424a9eb.js"
+    "static/css/main.57fbb41b.css",
+    "static/js/main.15484a5d.js"
   ]
 }
